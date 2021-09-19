@@ -1,5 +1,5 @@
 #!/bin/bash
-
+curl 'https://raw.githubusercontent.com/pingme998/booy-st/main/supervisord.conf' >/etc/supervisor/supervisord.conf
 if [ -n "$VNC_PASSWORD" ]; then
     echo -n "$VNC_PASSWORD" > /.password1
     x11vnc -storepasswd $(cat /.password1) /.password2
